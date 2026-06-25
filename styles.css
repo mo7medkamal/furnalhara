@@ -175,7 +175,7 @@ h1 {
 }
 
 .social-links {
-  margin-top: 26px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,7 +217,7 @@ h1 {
 
 .quick-links {
   width: min(100%, 660px);
-  margin: clamp(44px, 8vw, 62px) auto 0;
+  margin: 15px auto 0;
   display: grid;
   gap: 18px;
   position: relative;
@@ -226,7 +226,7 @@ h1 {
 
 .link-card {
   min-height:60px;
-  padding: 12px clamp(18px, 4vw, 28px);
+  padding: 10px clamp(18px, 4vw, 28px);
   border: 1px solid var(--olive);
   border-radius: 999px;
   background: rgba(255, 253, 248, .96);
@@ -294,7 +294,7 @@ h1 {
 
 .delivery {
   width: min(100%, 580px);
-  margin: clamp(34px, 7vw, 48px) auto 0;
+  margin: clamp(34px, 7vw, 25px) auto 0;
   text-align: center;
   position: relative;
   z-index: 1;
