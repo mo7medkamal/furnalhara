@@ -28,7 +28,7 @@ body {
     linear-gradient(135deg, rgba(79, 100, 65, .24), transparent 34%),
     linear-gradient(315deg, rgba(47, 119, 168, .12), transparent 42%),
     var(--page-bg);
-  font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+  font-family: "Inter", "Noto Sans Arabic", "Segoe UI", "Helvetica Neue", sans-serif;
 }
 
 a {
@@ -225,12 +225,12 @@ h1 {
 }
 
 .link-card {
-  min-height: 82px;
-  padding: 18px clamp(18px, 4vw, 28px);
-  border: 2px solid var(--olive);
+  min-height:60px;
+  padding: 12px clamp(18px, 4vw, 28px);
+  border: 1px solid var(--olive);
   border-radius: 999px;
   background: rgba(255, 253, 248, .96);
-  box-shadow: 6px 7px 0 var(--olive);
+  box-shadow: 3px 4px 0 var(--olive);
   direction: ltr;
   display: grid;
   grid-template-columns: 44px 1fr 32px;
@@ -310,17 +310,17 @@ h1 {
 .delivery-apps {
   margin-top: 24px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 10px 12px;
+  gap: 5px;
   font-size: clamp(14px, 3.2vw, 17px);
   font-weight: 800;
 }
 
 .delivery-apps span {
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: rgba(255, 253, 248, .36);
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.195);
   color: #241910;
   border: 1px solid rgba(79, 100, 65, .26);
 }
