@@ -160,7 +160,7 @@ h1 {
 
 .intro,
 .address {
-  margin: 10px auto 0;
+  margin: 5px auto 0;
   line-height: 1.65;
   font-size: clamp(17px, 3.7vw, 21px);
 }
@@ -168,12 +168,14 @@ h1 {
 .intro {
   max-width: 520px;
   color: var(--ink);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .address {
+    margin: 0px auto 0 !important;
   color: var(--muted);
-  font-weight: 500;
+  font-weight: 400;
+
 }
 
 .social-links {
