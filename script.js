@@ -8,6 +8,8 @@ const orderUrl = "https://6lb.menu/furnalhara";
 let toastTimer;
 
 function showToast(message) {
+  if (!toast) return;
+
   toast.textContent = message;
   toast.classList.add("is-visible");
   window.clearTimeout(toastTimer);
@@ -38,32 +40,34 @@ async function copyShareText() {
   textarea.remove();
 }
 
-shareButton.addEventListener("click", async () => {
-  const shareUrl = window.location.href.startsWith("file:")
-    ? orderUrl
-    : window.location.href;
-  const shareData = {
-    title: pageTitle,
-    text: pageText,
-    url: shareUrl
-  };
-
-  try {
-    if (navigator.share) {
-      await navigator.share(shareData);
-      return;
-    }
-
-    await copyShareText();
-    showToast("تم نسخ رابط الصفحة");
-  } catch (error) {
-    if (error.name === "AbortError") return;
+if (shareButton) {
+  shareButton.addEventListener("click", async () => {
+    const shareUrl = window.location.href.startsWith("file:")
+      ? orderUrl
+      : window.location.href;
+    const shareData = {
+      title: pageTitle,
+      text: pageText,
+      url: shareUrl
+    };
 
     try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        return;
+      }
+
       await copyShareText();
       showToast("تم نسخ رابط الصفحة");
-    } catch {
-      showToast("تعذر نسخ الرابط");
+    } catch (error) {
+      if (error.name === "AbortError") return;
+
+      try {
+        await copyShareText();
+        showToast("تم نسخ رابط الصفحة");
+      } catch {
+        showToast("تعذر نسخ الرابط");
+      }
     }
-  }
-});
+  });
+}
