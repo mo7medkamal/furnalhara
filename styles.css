@@ -379,7 +379,7 @@ h1 {
   }
 
   .link-card {
-    min-height: 78px;
+    min-height: 45px;
     grid-template-columns: 38px 1fr 28px;
     box-shadow: 5px 6px 0 var(--olive);
   }
